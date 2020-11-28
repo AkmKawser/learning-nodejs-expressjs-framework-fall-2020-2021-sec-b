@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <h2>Welcome <%=user[0].name %></h2>
+    <h3 style="color: red">Remove Wishlist</h3>
+    <a href="/user">Home |</a>
+    <a href="/user/profile">Profile </a> |
+    <a href="/user/change"> Change Password </a> |
+    <a href="/logout">Logout </a>
+    <hr />
+    <a href="/user/allwishlist">Wishlist </a>
+    <hr />
+
+    <div>
+      <hr />
+
+      <table>
+        <tr>
+          <td>Post Date:</td>
+          <td><%=post[0].postcreate_date %></td>
+        </tr>
+        <tr>
+          <td>From:</td>
+          <td><%=post[0].postffrom %></td>
+        </tr>
+        <tr>
+          <td>To:</td>
+          <td><%=post[0].posttto %></td>
+        </tr>
+        <tr>
+          <td>Drescription:</td>
+          <td><%=post[0].postdrescription %></td>
+        </tr>
+        <tr>
+          <td>Total Cost:</td>
+          <td><%=post[0].postcost %></td>
+        </tr>
+      </table>
+      <hr />
+      <form method="POST">
+        <h4>Are You Sure?</h4>
+        <input
+          style="background-color: red; cursor: pointer"
+          type="submit"
+          name="submit"
+          value="Confirm"
+        />
+      </form>
+    </div>
+  </body>
+</html>
